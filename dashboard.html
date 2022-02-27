@@ -27,9 +27,46 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <!-- Main CSS File -->
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <!------ Include the above in your HEAD tag ---------->
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/fixedcolumns/3.2.2/js/dataTables.fixedColumns.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/jq-2.2.4/dt-1.10.13/fc-3.2.2/fh-3.1.2/r-2.1.0/sc-1.4.2/datatables.min.css" />
+<script type="text/javascript">
+$(document).ready(function() {
+    var table = $('#tab').DataTable( {
+        scrollY:        "400px",
+        scrollX:        true,
+        scrollCollapse: false,
+        paging:         false,
+        fixedColumns:   {
+            leftColumns: 1,
+        }
+    } );
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
 </head>
 
 <body>
+    <script>
+        $(document).ready(function() {
+    $('#example').DataTable();
+} );
+    </script>
     <div class="page-wrapper">
         <header class="header header-14">
             <div class="header-top">
@@ -241,12 +278,7 @@
 								    				<div class="card-body">
 								    					<h3 class="card-title">Registered Product</h3><!-- End .card-title -->
 
-														<p>User Name<br>
-														User Company<br>
-														John str<br>
-														New York, NY 10001<br>
-														1-234-987-6543<br>
-														yourmail@mail.com<br>
+													
 														<a href="#">Edit <i class="icon-edit"></i></a></p>
 								    				</div><!-- End .card-body -->
 								    			</div><!-- End .card-dashboard -->
@@ -290,33 +322,29 @@
                                                             </div><!-- End .form-group -->
                     
                                                             <div class="form-group">
-                                                                <label for="register-password">E-mail</label>
-                                                                <input type="email" class="form-control" id="register-password" name="" required>
+                                                                <label for="register-password">Summary</label>
+                                                                <input type="text" class="form-control" id="register-password" name="" required>
                                                             </div><!-- End .form-group -->
+                                                            <div class="form-group">
+                                                                <label for="register-password">Product description</label>
+                                                                <textarea type="text" class="form-control" id="register-password" name="" required></textarea>
+                                                            </div><!-- End .form-group -->
+                                                       
                     
                                                             <div class="form-group">
-                                                                <label for="register-password">Password</label>
-                                                                <input type="password" class="form-control" id="register-password" name="" required>
-                                                            </div><!-- End .form-group -->
-                    
-                                                            <div class="form-group">
-                                                                <label for="register-password">Gender</label>
+                                                                <label for="register-password">Product Category</label>
                                                                 <select name="" id="" class="form-control">
-                                                                    <option value="Male" class="form-control">Male</option>
-                                                                    <option value="Male" class="form-control">Female</option>
+                                                                    <option value="Male" class="form-control">Electronic</option>
+                                                                    <option value="Male" class="form-control">Stationary</option>
+                                                                    <option value="Male" class="form-control">Appliances</option>
+                                                                    <option value="Male" class="form-control">Clothes</option>
+                                                                    <option value="Male" class="form-control">Jewellery</option>
                                                                 </select>  
                                                             </div><!-- End .form-group -->
-                    
                                                             <div class="form-group">
-                                                                <label for="register-password">Country</label>
-                                                                <select name="" id="" class="form-control">
-                                                                    <option value="Male" class="form-control">Kenya</option>
-                                                                    <option value="Male" class="form-control">Rwanda</option>
-                                                                    <option value="Male" class="form-control">Uganda</option>
-                                                                    <option value="Male" class="form-control">Tanzania</option>
-                                                                    <option value="Male" class="form-control">Burundi</option>
-                                                                </select>  
-                                                            </div><!-- End .form-group -->
+                                                                <label for="register-password">Product Category</label>
+                                                                <input type="file" class="form-control" id="reg" name="" required>
+                                                            </div>
                     
                                                             <div class="form-group">
                                                                 <label for="register-password">Brand name</label>
@@ -326,7 +354,7 @@
                     
                                                             <div class="form-footer">
                                                                 <button type="submit" class="btn btn-outline-primary-2">
-                                                                    <span>SIGN UP</span>
+                                                                    <span>Register</span>
                                                                     <i class="icon-long-arrow-right"></i>
                                                                 </button>
                     
@@ -343,10 +371,222 @@
                                         </div><!-- End .form-box -->
 								    </div><!-- .End .tab-pane -->
 
-								    <div class="tab-pane fade" id="tab-downloads" role="tabpanel" aria-labelledby="tab-downloads-link">
-								    	<p>No downloads available yet.</p>
-								    	<a href="#" class="btn btn-outline-primary-2"><span>GO SHOP</span><i class="icon-long-arrow-right"></i></a>
-								    </div><!-- .End .tab-pane -->
+								    <div class="tab-pane fade container" style="width:auto;" id="tab-downloads" role="tabpanel" aria-labelledby="tab-downloads-link">
+						                   <!--Product stored-->
+                                           <div class="page-wrapper container">
+
+                                            <main class="main container">
+                                                <div class="page-header text-center" style="background-image: url('assets/images/page-header-bg.jpg')">
+                                                <div class="page-content container">
+                                                    <div class="container">
+                                                        <div class="row">
+                                                            <div class="col-lg-9">
+                                                                <div class="toolbox">
+                                                                    <div class="toolbox-left">
+                                                                        <div class="toolbox-info">
+                                                                            Showing <span>9 of 56</span> Products
+                                                                        </div><!-- End .toolbox-info -->
+                                                                    </div><!-- End .toolbox-left -->
+                                    
+                                                                    <div class="toolbox-right">
+                                                                        <div class="toolbox-sort">
+                                                                            <label for="sortby">Sort by:</label>
+                                                                            <div class="select-custom">
+                                                                                <select name="sortby" id="sortby" class="form-control">
+                                                                                    <option value="popularity" selected="selected">Most Popular</option>
+                                                                                    <option value="rating">Most Rated</option>
+                                                                                    <option value="date">Date</option>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div><!-- End .toolbox-sort -->
+                                                                        <div class="toolbox-layout">		
+                                    
+                                                                
+                                    
+                                                            
+                                                                        </div><!-- End .toolbox-layout -->
+                                                                    </div><!-- End .toolbox-right -->
+                                                                </div><!-- End .toolbox -->
+                                    
+                                    
+                                                            <div class="products mb-3">
+                                                                <div class="product product-list">
+                                                                    <div class="row">
+                                                                        <div class="col-6 col-lg-3">
+                                                                            <figure class="product-media">
+                                                                                <!--<span class="product-label label-new">New</span>-->
+                                                                                <a href="product.html">
+                                                                                    <img src="assets/images/products/product-4.jpg" alt="Product image" class="product-image">
+                                                                                </a>
+                                                                            </figure><!-- End .product-media -->
+                                                                        </div><!-- End .col-sm-6 col-lg-3 -->
+                                                                        <div class="col-lg-6">
+                                                                            <div class="product-body product-action-inner">
+                                                                                <div class="product-cat" style="text-align: center; background-color: rgb(1, 72, 119);color: aliceblue;padding: 4px;width:50%;">
+                                                                                    <a href="#">Women</a>
+                                                                                </div><!-- End .product-cat -->
+                                                                                <h3 class="product-title" style="text-align: left;"><a href="#">Brown paperbag waist pencil skirt</a></h3><!-- End .product-title -->
+                                    
+                                                                                <div class="product-content">
+                                                                                    <p style="text-align: left;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque </p>
+                                                                                </div><!-- End .product-content -->
+
+                                                                                <div class="product-price">
+                                                                                    <span>Price: </span> $60.00
+                                                                                </div>
+                                                                                <div class="product-nav product-nav">
+                                                                                    <button type="submit" class="btn btn-outline-danger">
+                                                                                        <span>Delete</span>
+                                                                                        <i class="icon-long-arrow-right"></i>
+                                                                                    </button>
+
+                                                                                  <button type="submit" class="btn btn-outline-secondary">
+                                                                                 <span>Update</span>
+                                                                                  <i class="icon-long-arrow-right"></i>
+                                                                                 </button>
+                                                                                </div><!-- End .product-nav -->
+                                                                            </div><!-- End .product-body -->
+                                                                        </div><!-- End .col-lg-6 -->
+                                                                    </div><!-- End .row -->
+                                                                    
+                                                                </div><!-- End .product -->
+                                                                <div class="product product-list">
+                                                                    <div class="row">
+                                                                        <div class="col-6 col-lg-3">
+                                                                            <figure class="product-media">
+                                                                                <!--<span class="product-label label-new">New</span>-->
+                                                                                <a href="product.html">
+                                                                                    <img src="assets/images/products/product-4.jpg" alt="Product image" class="product-image">
+                                                                                </a>
+                                                                            </figure><!-- End .product-media -->
+                                                                        </div><!-- End .col-sm-6 col-lg-3 -->
+                                                                        <div class="col-lg-6">
+                                                                            <div class="product-body product-action-inner">
+                                                                                <div class="product-cat" style="text-align: center; background-color: rgb(1, 72, 119);color: aliceblue;padding: 4px;width:50%;">
+                                                                                    <a href="#">Women</a>
+                                                                                </div><!-- End .product-cat -->
+                                                                                <h3 class="product-title" style="text-align: left;"><a href="#">Brown paperbag waist pencil skirt</a></h3><!-- End .product-title -->
+                                    
+                                                                                <div class="product-content">
+                                                                                    <p style="text-align: left;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque </p>
+                                                                                </div><!-- End .product-content -->
+
+                                                                                <div class="product-price">
+                                                                                    <span>Price: </span> $60.00
+                                                                                </div>
+                                                                                <div class="product-nav product-nav">
+                                                                                    <button type="submit" class="btn btn-outline-danger">
+                                                                                        <span>Delete</span>
+                                                                                        <i class="icon-long-arrow-right"></i>
+                                                                                    </button>
+
+                                                                                  <button type="submit" class="btn btn-outline-secondary">
+                                                                                 <span>Update</span>
+                                                                                  <i class="icon-long-arrow-right"></i>
+                                                                                 </button>
+                                                                                </div><!-- End .product-nav -->
+                                                                            </div><!-- End .product-body -->
+                                                                        </div><!-- End .col-lg-6 -->
+                                                                    </div><!-- End .row -->
+                                                                    
+                                                                </div><!-- End .product -->
+                                                                <div class="product product-list">
+                                                                    <div class="row">
+                                                                        <div class="col-6 col-lg-3">
+                                                                            <figure class="product-media">
+                                                                                <!--<span class="product-label label-new">New</span>-->
+                                                                                <a href="product.html">
+                                                                                    <img src="assets/images/products/product-4.jpg" alt="Product image" class="product-image">
+                                                                                </a>
+                                                                            </figure><!-- End .product-media -->
+                                                                        </div><!-- End .col-sm-6 col-lg-3 -->
+                                                                        <div class="col-lg-6">
+                                                                            <div class="product-body product-action-inner">
+                                                                                <div class="product-cat" style="text-align: center; background-color: rgb(1, 72, 119);color: aliceblue;padding: 4px;width:50%;">
+                                                                                    <a href="#">Women</a>
+                                                                                </div><!-- End .product-cat -->
+                                                                                <h3 class="product-title" style="text-align: left;"><a href="#">Brown paperbag waist pencil skirt</a></h3><!-- End .product-title -->
+                                    
+                                                                                <div class="product-content">
+                                                                                    <p style="text-align: left;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque </p>
+                                                                                </div><!-- End .product-content -->
+
+                                                                                <div class="product-price">
+                                                                                    <span>Price: </span> $60.00
+                                                                                </div>
+                                                                                <div class="product-nav product-nav">
+                                                                                    <button type="submit" class="btn btn-outline-danger">
+                                                                                        <span>Delete</span>
+                                                                                        <i class="icon-long-arrow-right"></i>
+                                                                                    </button>
+
+                                                                                  <button type="submit" class="btn btn-outline-secondary">
+                                                                                 <span>Update</span>
+                                                                                  <i class="icon-long-arrow-right"></i>
+                                                                                 </button>
+                                                                                </div><!-- End .product-nav -->
+                                                                            </div><!-- End .product-body -->
+                                                                        </div><!-- End .col-lg-6 -->
+                                                                    </div><!-- End .row -->
+                                                                    
+                                                                </div><!-- End .product -->
+                                                                </div>
+                                                                
+                                    
+                                    
+                                    
+                                                                <div class="products mb-3">
+                                                                    <div class="row justify-content-left">
+                                                                 
+                                                                        <!---->
+                                                                    
+                                    
+                                                                      
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                                                      
+                                    
+                                                                     
+                                    
+                                                                        
+                                                                    </div><!-- End .row -->
+                                                                </div><!-- End .products -->
+                                    
+                                    
+                                                                <nav aria-label="Page navigation">
+                                                                    <ul class="pagination justify-content-center">
+                                                                        <li class="page-item disabled">
+                                                                            <a class="page-link page-link-prev" href="#" aria-label="Previous" tabindex="-1" aria-disabled="true">
+                                                                                <span aria-hidden="true"><i class="icon-long-arrow-left"></i></span>Prev
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="page-item active" aria-current="page"><a class="page-link" href="#">1</a></li>
+                                                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                                        <li class="page-item-total">of 6</li>
+                                                                        <li class="page-item">
+                                                                            <a class="page-link page-link-next" href="#" aria-label="Next">
+                                                                                Next <span aria-hidden="true"><i class="icon-long-arrow-right"></i></span>
+                                                                            </a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </nav>
+                                                            </div><!-- End .col-lg-9 -->
+
+
+                                                        </div><!-- End .row -->
+                                                    </div><!-- End .container -->
+                                                </div><!-- End .page-content -->
+                                            </main><!-- End .main -->
+                                    
+                                        </div>
+                                            <!--END FILTER SEARCH-->
+                                    </div>
 
 								    <div class="tab-pane fade" id="tab-address" role="tabpanel" aria-labelledby="tab-address-link">
 								    	<p>The following addresses will be used on the checkout page by default.</p>
@@ -793,6 +1033,9 @@
     </div><!-- End .modal -->
 
     <!-- Plugins JS File -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.4/js/dataTables.bootstrap4.min.js"></script>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/jquery.hoverIntent.min.js"></script>
